@@ -15,3 +15,25 @@ media
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+
+# dependencies
+frontend/node_modules
+frontend/.pnp
+frontend.pnp.js
+
+# testing
+frontend/coverage
+
+# production
+frontend/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+/pm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
