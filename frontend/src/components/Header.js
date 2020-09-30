@@ -7,7 +7,9 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) =>({
     appBar: {
-        borderBottom: `1px solid ${theme.palette.divider}`
+        borderBottom: `1px solid ${theme.palette.divider}`,
+        backgroundColor: 'white',
+        color:'black'
     },
 }))
 
@@ -17,9 +19,9 @@ function Header() {
     return (
         <>
             <CssBaseline />
-            <AppBar position='static' color='white' elevation={0} className={classes.appBar}>
+            <AppBar position='static' elevation={0} className={classes.appBar}>
                 <Toolbar>
-                    <Typography variant='h5' color='red' noWrap>
+                    <Typography variant='h5' color='inherit' noWrap >
                         BlogMeUp
                     </Typography>
                 </Toolbar>
