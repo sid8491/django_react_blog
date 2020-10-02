@@ -6,9 +6,9 @@ function PostLoading(Component) {
         return (
             <p style={{ fontSize: '25px' }}>
             We are still loading posts....
-        </p>
-    )
-}
+            </p>
+        )
+    }
 }
 
 export default PostLoading;
