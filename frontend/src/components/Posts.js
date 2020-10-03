@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -46,11 +47,17 @@ function Posts(props) {
 						return (
 							<Grid item key={post.id} xs={12} md={4}>
 								<Card className={classes.card}>
-									<CardMedia
-										className={classes.CardMedia}
-										image="https://source.unsplash.com/random"
-										title="Image title"
-									/>
+									<Link
+										color="textPrimary"
+										to={'post/' + post.slug}
+										className={classes.link}
+									>
+										<CardMedia
+											className={classes.CardMedia}
+											image="https://source.unsplash.com/random"
+											title="Image title"
+										/>
+									</Link>
 									<CardContent className={classes.cardContent}>
 										<Typography
 											gutterBottom
@@ -58,7 +65,7 @@ function Posts(props) {
 											component="h2"
 											className={classes.postTitle}
 										>
-											{post.title.substr(0, 50)}...
+											{post.title.substr(0, 50)}... {post.slug}
 										</Typography>
 										<div className={classes.postText}>
 											<Typography

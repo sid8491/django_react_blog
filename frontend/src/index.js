@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Register from './components/Register';
 import Login from './components/Login';
 import Logout from './components/Logout';
+import PostDetail from './components/PostDetail';
 
 const routing = (
   <Router>
@@ -19,6 +20,7 @@ const routing = (
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />
         <Route path='/logout' component={Logout} />
+        <Route path='/post/:slug' component={PostDetail} />
       </Switch>
       <Footer />
     </React.StrictMode>
