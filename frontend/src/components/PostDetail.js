@@ -23,9 +23,9 @@ function PostDetail() {
 	const [data, setData] = useState({ posts: [] });
 
 	useEffect(() => {
-		axiosInstance.get(slug).then((res) => {
-			setData({ posts: res.data });
-			console.log(res.data);
+		axiosInstance.get('posts/' + slug).then((res) => {
+			setData({ posts: res.data[0] });
+            console.log(res.data);
 		});
 	}, [setData]);
 
